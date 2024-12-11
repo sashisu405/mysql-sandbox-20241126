@@ -22,6 +22,9 @@ mysql -u root -p
 # DBの作成（=script読み込み）はrootで行う
 source world.sql
 
+# ユーザー情報の確認
+SELECT User, Host FROM mysql.user;
+
 # その後に指定ユーザーに権限を付与する
 GRANT ALL PRIVILEGES ON world.* TO 'testuser'@'%';
 ```
